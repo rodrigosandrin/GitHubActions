@@ -17,7 +17,7 @@ on:
 jobs:
 
   # This workflow contains a single job called "build"
-  build 1:
+  build1:
     runs-on: ubuntu-latest
     env:
       myvar: "This is My var"
@@ -29,7 +29,7 @@ jobs:
         run: chmod +x .github/scripts/build.sh && .github/scripts/build.sh
         shell: bash
 
-  build 2:
+  build2:
     runs-on: ubuntu-latest
     env:
       myvar: "This is Another var"
@@ -40,6 +40,4 @@ jobs:
       - name: Run build script
         run: chmod +x .github/scripts/build.sh && .github/scripts/build.sh
         shell: bash
-
-
 
