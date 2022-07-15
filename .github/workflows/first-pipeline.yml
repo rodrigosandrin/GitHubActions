@@ -17,29 +17,29 @@ on:
 jobs:
 
   # This workflow contains a single job called "build"
-  build:
+  build 1:
+    runs-on: ubuntu-latest
     env:
       myvar: "This is My var"
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v3
+   
+      - name: Run build script
+        run: chmod +x .github/scripts/build.sh && .github/scripts/build.sh
+        shell: bash
 
-    
-      - name: Show folder
-        run: pwd
+  build 2:
+    runs-on: ubuntu-latest
+    env:
+      myvar: "This is Another var"
 
-      - name: Show content
-        run: ls -lha
-
+    steps:
+      - uses: actions/checkout@v3
+   
       - name: Run build script
         run: chmod +x .github/scripts/build.sh && .github/scripts/build.sh
         shell: bash
 
 
-      # Runs a single command using the runners shell
-      #- name: Run a one-line script
-      #  run: echo Hello, world! $myvar
 
