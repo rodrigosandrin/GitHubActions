@@ -26,9 +26,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Run build script
-        run: .github/scripts/build.sh
-        shell: bash
+      - name: Show folder
+        run: pwd
+
+      - name: Show content
+        run: ls -lha
+
+
 
       # Runs a single command using the runners shell
       #- name: Run a one-line script
