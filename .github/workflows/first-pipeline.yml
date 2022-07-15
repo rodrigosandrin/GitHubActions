@@ -27,7 +27,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Run build script
-        run: ./.github/scripts/build.sh
+        run: .github/scripts/build.sh
         shell: bash
 
       # Runs a single command using the runners shell
