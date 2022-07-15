@@ -30,7 +30,6 @@ jobs:
         shell: bash
 
   build2:
-    needs: build1
     runs-on: ubuntu-latest
     env:
       myvar: "This is Another var"
