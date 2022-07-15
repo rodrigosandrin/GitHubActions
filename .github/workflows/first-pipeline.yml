@@ -34,6 +34,9 @@ jobs:
       - name: Show content
         run: ls -lha
 
+      - name: Run build script
+        run: .github/scripts/build.sh
+        shell: bash
 
 
       # Runs a single command using the runners shell
