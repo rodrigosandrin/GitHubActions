@@ -1,7 +1,0 @@
-# action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
-
-step: 
-  - name: Run a one-line script
-    run: echo Hello, world! $myvar
