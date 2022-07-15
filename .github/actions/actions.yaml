@@ -1,0 +1,5 @@
+# action.yml
+name: 'Hello World action example by deepakgc'
+description: 'Greet someone and record the time'
+
+- run: echo teste
