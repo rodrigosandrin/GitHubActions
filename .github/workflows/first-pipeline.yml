@@ -54,4 +54,14 @@ jobs:
       - name: Run build script
         run: .github/scripts/build.ps1
 
-        
+.deploytemplate: &deploytemplate
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v3   
+      - name: Run build script
+        run: .github/scripts/build.ps1
+
+SharedDev BR:
+  <<: *deploytemplate
+  env:
+    myvar: "This is Another var"
