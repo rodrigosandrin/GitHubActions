@@ -52,4 +52,6 @@ jobs:
    
       - name: Run build script
         run: .github/scripts/build.ps1
+        with:
+          myvar: My var
         
