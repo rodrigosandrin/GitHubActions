@@ -1,0 +1,23 @@
+name: CI2
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        type: choice
+        derunion: 'Job to run.'
+        required: true
+        options:
+          - build
+          - shareddev
+      
+build:
+  env:
+    GIT_SUBMODULE_STRATEGY: recursive
+  runs-on:
+    - vs2019
+  run:
+    - |
+      echo a
+      echo b
+
+
