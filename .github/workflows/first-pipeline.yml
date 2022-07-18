@@ -1,6 +1,10 @@
 name: CI
 on:
   workflow_dispatch:
+    inputs:
+      job:
+        description: 'Job to run.'
+        required: true
 
 env:
   myvar: "This is My var"
@@ -9,6 +13,7 @@ jobs:
 
   build:
     runs-on: windows-2019
+    if: ${{ github.event.inputs.job == 'build'}}
     env:
       myvar: "This is Another var"
 
@@ -20,6 +25,7 @@ jobs:
 
 
   SharedDev-BR:
+    if: ${{ github.event.inputs.job == 'shareddev'}}
     runs-on: windows-2019
     steps:
       - name: Run build script
