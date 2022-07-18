@@ -49,3 +49,26 @@ jobs:
           service_name: 'servicename'
           server: "myserver.local"
           excludes: '*.pdb'
+
+
+  Production-BR:
+    #if: ${{ github.event.inputs.job == 'shareddev'}}
+    runs-on: windows-2019
+    needs: build
+    environment: Production
+    steps:
+
+      - uses: actions/checkout@v3
+
+      - name: Run build script
+        run: .github/scripts/build.ps1
+  
+        env:
+          GIT_STRATEGY: none
+          environment: Production
+          environment_level: DEV
+          variant: 'BR'
+          service_folder: 'servicefolder'
+          service_name: 'servicename'
+          server: "myserver.local"
+          excludes: '*.pdb'          
