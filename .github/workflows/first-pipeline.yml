@@ -7,7 +7,7 @@ env:
 
 jobs:
 
-  build1:
+  build:
     runs-on: windows-2019
     env:
       myvar: "This is Another var"
@@ -17,3 +17,17 @@ jobs:
 
       - name: Run build script
         run: .github/scripts/build.ps1
+
+
+  SharedDev-BR:
+  - name: Run build script
+    run: .github/scripts/build.ps1
+    env:
+      GIT_STRATEGY: none
+      environment: SharedDev
+      environment_level: DEV
+      variant: 'BR'
+      service_folder: 'servicefolder'
+      service_name: 'servicename'
+      server: "myserver.local"
+      excludes: '*.pdb'
