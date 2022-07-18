@@ -9,15 +9,15 @@ on:
         options:
           - build
           - shareddev
-      
-build:
-  env:
-    GIT_SUBMODULE_STRATEGY: recursive
-  runs-on:
-    - vs2019
-  run:
-    - |
-      echo a
-      echo b
-
+jobs:      
+  build:
+    env:
+      GIT_SUBMODULE_STRATEGY: recursive
+    runs-on:
+      - vs2019
+    run:
+      - |
+        echo a
+        echo b
+  
 
