@@ -1,0 +1,44 @@
+name: CI
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  myvar: "This is My var"
+
+jobs:
+
+  build1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+   
+      - name: Run build script
+        run: chmod +x .github/scripts/build.sh && .github/scripts/build.sh
+        shell: bash
+
+  build2:
+    needs: build1
+    runs-on: ubuntu-latest
+    env:
+      myvar: "This is Another var"
+
+    steps:
+      - uses: actions/checkout@v3
+   
+      - name: Run build script
+        run: chmod +x .github/scripts/build.sh && .github/scripts/build.sh
+        shell: bash
+
+  build3:
+    runs-on: windows-2019
+    env:
+      myvar: "This is Another var"
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run build script
+        run: .github/scripts/build.ps1
