@@ -29,9 +29,10 @@ jobs:
 
 
   SharedDev-BR:
-    if: ${{ github.event.inputs.job == 'shareddev'}}
+    #if: ${{ github.event.inputs.job == 'shareddev'}}
     runs-on: windows-2019
     needs: build
+    environment: shareddev
     steps:
 
       - uses: actions/checkout@v3
