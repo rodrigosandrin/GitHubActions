@@ -11,9 +11,7 @@ on:
           - shareddev
           
 defaults:
-  steps:
-    - name: RUN-Defaults
-      run:  echo DEFAULTS
+  run:  echo DEFAULTS
        
 
 jobs:      
