@@ -11,7 +11,7 @@ on:
           - shareddev
           
 defaults:
-  run:  echo DEFAULTS
+  run:  .github/scripts/build.sh
        
 
 jobs:      
