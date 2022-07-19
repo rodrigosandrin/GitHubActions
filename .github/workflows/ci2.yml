@@ -21,9 +21,10 @@ jobs:
     runs-on:
       - vs2019
     steps:  
-      run:
-        - |
-          echo a
-          echo b
-  
+      - name: RUN
+        run:
+          - |
+            echo a
+            echo b
+    
 
