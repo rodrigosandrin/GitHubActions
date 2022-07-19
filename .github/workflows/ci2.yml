@@ -20,9 +20,10 @@ jobs:
       GIT_SUBMODULE_STRATEGY: recursive
     runs-on:
       - vs2019
-    run:
-      - |
-        echo a
-        echo b
+    steps:  
+      run:
+        - |
+          echo a
+          echo b
   
 
