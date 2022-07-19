@@ -10,10 +10,11 @@ on:
           - build
           - shareddev
           
-#defaults:
-#  run:
-#    - |
-#      echo DEFAULTS
+defaults:
+  - name: RUN-Defaults
+    run: |
+      echo DEFAULTS
+
 jobs:      
   build:
     env:
