@@ -4,16 +4,17 @@ on:
     inputs:
       job:
         type: choice
-        derunion: 'Job to run.'
+        description: 'Job to run.'
         required: true
         options:
           - build
           - shareddev
           
 defaults:
-  - name: RUN-Defaults
-    run: |
-      echo DEFAULTS
+  steps:
+    - name: RUN-Defaults
+      run:  echo DEFAULTS
+       
 
 jobs:      
   build:
