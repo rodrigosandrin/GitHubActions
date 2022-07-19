@@ -22,8 +22,7 @@ jobs:
       - ubuntu-latest
     steps:  
       - name: RUN
-        run:
-          - |
+        run: |
             echo a
             echo b
     
