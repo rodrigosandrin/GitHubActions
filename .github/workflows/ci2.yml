@@ -10,8 +10,8 @@ on:
           - build
           - shareddev
           
-defaults:
-  run:  .github/scripts/build.sh
+env:
+  ACTIONS_RUNNER_HOOK_JOB_STARTED:  .github/scripts/build.sh
        
 
 jobs:      
