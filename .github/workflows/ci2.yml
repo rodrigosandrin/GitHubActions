@@ -19,7 +19,7 @@ jobs:
     env:
       GIT_SUBMODULE_STRATEGY: recursive
     runs-on:
-      - vs2019
+      - ubuntu-latest
     steps:  
       - name: RUN
         run:
