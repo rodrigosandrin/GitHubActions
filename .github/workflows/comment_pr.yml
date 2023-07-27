@@ -15,25 +15,14 @@ jobs:
           echo "| ---------- | ----------- |"
           echo "| env_token  | $env_token  |"
           echo "| env_domain | $env_domain |"
-          } >> $GITHUB_STEP_SUMMARY
+          } >> output.txt
 
 
       - name: Comment PR
         uses: thollander/actions-comment-pull-request@v2
         with:
-          message: |
-            "${{ steps.step1.outputs }}"
+          filePath: output.txt
           comment_tag: execution
           mode: recreate
       
       
-      - uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: '👋 Thanks for reporting!',
-              labels: ['Triage']
-            })              
