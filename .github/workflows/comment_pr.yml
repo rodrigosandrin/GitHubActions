@@ -17,7 +17,6 @@ jobs:
           echo "| env_domain | $env_domain |"
           } >> $GITHUB_STEP_SUMMARY
 
-          echo "UNITTESTCOVERAGE=$(cat $GITHUB_STEP_SUMMARY)" >> $GITHUB_ENV
 
       - name: Comment PR
         uses: thollander/actions-comment-pull-request@v2
