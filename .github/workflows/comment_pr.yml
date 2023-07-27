@@ -1,0 +1,33 @@
+name: CommentPR
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "comment_pr" ]
+          
+       
+
+jobs:      
+  build:
+    env:
+      GIT_SUBMODULE_STRATEGY: recursive
+    runs-on:
+      - ubuntu-latest
+    steps:  
+      - name: RUN
+        id: step1
+        run: |
+            echo a
+            echo b
+    
+    
+
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '👋 Thanks for reporting!'
+            })     
