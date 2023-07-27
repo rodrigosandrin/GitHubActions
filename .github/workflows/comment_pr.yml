@@ -1,14 +1,14 @@
 name: CommentPR
 on:
-  push:
-    branches: [ "comment_pr" ]
+  # push:
+  #   branches: [ "comment_pr" ]
   pull_request:
     branches: [ "comment_pr" ]
           
        
 
 jobs:      
-  build:
+  comment:
     env:
       GIT_SUBMODULE_STRATEGY: recursive
     runs-on:
@@ -19,8 +19,7 @@ jobs:
         run: |
             echo a
             echo b
-    
-    
+      
 
       - uses: actions/github-script@v6
         with:
