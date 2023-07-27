@@ -15,7 +15,7 @@ jobs:
         uses: thollander/actions-comment-pull-request@v2
         with:
           message: |
-            ${{ steps.step1.outputs.* }}
+            "${{ steps.step1.outputs.stdout }}"
           comment_tag: execution
           mode: recreate
       
