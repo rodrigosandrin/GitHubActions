@@ -15,7 +15,7 @@ jobs:
         uses: thollander/actions-comment-pull-request@v2
         with:
           message: |
-            "${{ steps.step1.outputs.stdout }}"
+            "${{ format('{0}{1}', steps.step1.outputs.stdout, steps.step1.outputs.stderr) }}"
           comment_tag: execution
           mode: recreate
       
