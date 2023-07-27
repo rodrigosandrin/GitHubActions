@@ -9,7 +9,7 @@ jobs:
       - name: RUN
         id: step1
         run: |
-            echo a >> $GITHUB_OUTPUT
+            echo "a"
 
       - name: Comment PR
         uses: thollander/actions-comment-pull-request@v2
