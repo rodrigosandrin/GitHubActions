@@ -1,7 +1,7 @@
 name: CommentPR
 on:
-  # push:
-  #   branches: [ "comment_pr" ]
+  push:
+    branches: [ "comment_pr" ]
   pull_request:
     branches: [ "comment_pr" ]
   
@@ -33,4 +33,3 @@ jobs:
               body: '👋 Thanks for reporting!'
             })     
 
-            
