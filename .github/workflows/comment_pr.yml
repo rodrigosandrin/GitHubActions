@@ -1,7 +1,7 @@
 name: CommentPR
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "comment_pr" ]
   pull_request:
     branches: [ "comment_pr" ]
           
