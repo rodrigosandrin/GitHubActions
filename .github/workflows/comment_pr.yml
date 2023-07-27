@@ -23,7 +23,7 @@ jobs:
         uses: thollander/actions-comment-pull-request@v2
         with:
           message: |
-            "${{join(steps.step1.outputs.*, '\n')}}"
+            "${{ steps.step1.outputs }}"
           comment_tag: execution
           mode: recreate
       
