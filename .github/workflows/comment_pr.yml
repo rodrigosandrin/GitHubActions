@@ -6,14 +6,16 @@ jobs:
     runs-on: ubuntu-latest
     name: An example job to comment a PR
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: RUN
+        id: step1
+        run: |
+            echo a >> $GITHUB_OUTPUT
 
       - name: Comment PR
         uses: thollander/actions-comment-pull-request@v2
         with:
           message: |
-            Hello world !!!!!!!! :wave:
+            ${{ steps.step1.outputs.* }}
           comment_tag: execution
           mode: recreate
       
