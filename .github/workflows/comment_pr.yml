@@ -13,8 +13,8 @@ jobs:
           echo "### Workflow variables"
           echo "| Variable   | Value       |"
           echo "| ---------- | ----------- |"
-          echo "| env_token  | $env_token  |"
-          echo "| env_domain | $env_domain |"
+          echo "| env_token  | env_token  |"
+          echo "| env_domain | env_domain |"
           } >> output.txt
 
 
