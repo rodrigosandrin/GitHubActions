@@ -4,6 +4,8 @@ on:
   #   branches: [ "comment_pr" ]
   pull_request:
     branches: [ "comment_pr" ]
+  
+  workflow_dispatch:
           
        
 
